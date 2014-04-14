@@ -10,3 +10,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 gem 'jbuilder', '~> 1.2'
+
+group :development, :test do
+	gem 'rspec-rails'
+end
+
+group :test do
+	gem 'capybara'
+end
