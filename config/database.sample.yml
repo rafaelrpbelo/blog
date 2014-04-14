@@ -1,0 +1,6 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: rafaelbelo 
+  password: leafar
