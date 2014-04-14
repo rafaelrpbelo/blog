@@ -1,9 +1,12 @@
 pt-BR:
+
   flash:
     post:
       create:
         notice: 'Post criado com sucesso'
+      
       update:
         notice: 'Post atualizado com sucesso'
+      
       delete:
         notice: 'Post deletado com sucesso'

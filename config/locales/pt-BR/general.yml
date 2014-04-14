@@ -1,0 +1,23 @@
+pt-BR:
+
+  title:
+    post:
+      index: 'Todos os Posts'
+      new: 'Criar Post'
+      edit: 'Editar Post'
+
+  link:
+    action:
+      back: 'voltar'
+      show: 'mostrar'
+      edit: 'atualizar'
+      destroy: 'deletar'
+    post:
+      new: 'Criar post'
+
+  error:
+    title: 'Não foi possível prosseguir, pois:'
+
+  data:
+    confirm: 
+      destroy: 'Você realmente deseja deletar o %{resource}'

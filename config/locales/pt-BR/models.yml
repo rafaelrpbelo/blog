@@ -1,0 +1,10 @@
+pt-BR:
+
+  activerecord:
+    models:
+      post: 'Post'
+
+    attributes:
+      post:
+        title: 'Título'
+        body: 'Conteúdo'

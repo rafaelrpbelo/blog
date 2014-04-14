@@ -1,0 +1,9 @@
+pt-BR:
+
+  form:
+    labels:
+      title: 'Título'
+      body: 'Conteúdo'
+
+    action:
+      submit: 'Criar %{resource}'

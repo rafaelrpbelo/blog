@@ -1,6 +1,6 @@
 <%= notice %>
 
-<h2> Posts </h2>
+<h2><%= t('title.post.index') %></h2>
 
 <table>
 	<thread>
@@ -18,12 +18,13 @@
 			<tr>
 				<td><%= post.title %></td>
 				<td><%= post.body %></td>
-				<td><%= link_to 'Show', post %></td>
-				<td><%= link_to 'Update', edit_post_path(post) %></td>
-				<td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Você realmente deseja apagar o post?' } %></td>
+				<td><%= link_to t('link.action.show'), post %></td>
+				<td><%= link_to t('link.action.edit'), edit_post_path(post) %></td>
+				<td><%= link_to t('link.action.destroy'), post, method: :delete, 
+					data: { confirm: t('data.confirm.destroy', resource: 'post') } %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
 
-<%= link_to 'Criar Post', new_post_path %>
+<%= link_to t('link.post.new'), new_post_path %>

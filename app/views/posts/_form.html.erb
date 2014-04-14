@@ -1,6 +1,6 @@
 <%= form_for(@post) do |f| %>
 	<% if @post.errors.any? %>
-		<h3> Erros foram encontrados: </h3>
+		<h3><%= t('error.title') %></h3>
 		
 		<ul>
 			<% @post.errors.full_messages.each do |msg| %>
@@ -10,16 +10,16 @@
 	<% end %>
 
 	<div>
-		<%= f.label :title %>
+		<%= f.label :title, t('form.labels.title') %>
 		<%= f.text_field :title %>		
 	</div>
 
 	<div>
-		<%= f.label :body %>
+		<%= f.label :body, t('form.labels.body') %>
 		<%= f.text_field :body %>
 	</div>
 
 	<div>
-		<%= f.submit %>
+		<%= f.submit t('form.action.submit', resource: 'post') %>
 	</div>
 <% end %>
