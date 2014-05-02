@@ -4,9 +4,19 @@ pt-BR:
     post:
       create:
         notice: 'Post criado com sucesso'
-      
+
       update:
         notice: 'Post atualizado com sucesso'
-      
+
       delete:
         notice: 'Post deletado com sucesso'
+
+    category:
+      create:
+        notice: 'Categoria criada com sucesso'
+
+      update:
+        notice: 'Categoria atualizada com sucesso'
+
+      delete:
+        notice: 'Categoria deletada com sucesso'

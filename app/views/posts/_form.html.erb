@@ -1,26 +1,17 @@
 <%= form_for(@post) do |f| %>
-	<% if @post.errors.any? %>
-		<h3><%= t('error.title') %></h3>
-		
-		<ul>
-			<% @post.errors.full_messages.each do |msg| %>
-				<li><%= msg %></li>
-			<% end %>
-		</ul>
-	<% end %>
   <%= errors_explanation(@post) %>
 
-	<div>
-		<%= f.label :title, t('form.labels.title') %>
-		<%= f.text_field :title %>		
-	</div>
+  <div>
+    <%= f.label :title, t('form.labels.title') %>
+    <%= f.text_field :title %>
+  </div>
 
-	<div>
-		<%= f.label :body, t('form.labels.body') %>
-		<%= f.text_field :body %>
-	</div>
+  <div>
+    <%= f.label :body, t('form.labels.body') %>
+    <%= f.text_field :body %>
+  </div>
 
-	<div>
-		<%= f.submit t('form.action.submit', resource: 'post') %>
-	</div>
+  <div>
+    <%= f.submit t('form.action.submit', resource: 'post') %>
+  </div>
 <% end %>

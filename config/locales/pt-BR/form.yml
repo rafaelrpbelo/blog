@@ -4,6 +4,11 @@ pt-BR:
     labels:
       title: 'Título'
       body: 'Conteúdo'
+      name: 'Nome'
 
     action:
       submit: 'Criar %{resource}'
+      edit: 'Editar %{resource}'
+
+    error:
+      message: 'Não foi possível prosseguir, pois:'

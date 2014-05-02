@@ -20,11 +20,11 @@
 				<td><%= post.body %></td>
 				<td><%= link_to t('link.action.show'), post %></td>
 				<td><%= link_to t('link.action.edit'), edit_post_path(post) %></td>
-				<td><%= link_to t('link.action.destroy'), post, method: :delete, 
+				<td><%= link_to t('link.action.destroy'), post, method: :delete,
 					data: { confirm: t('data.confirm.destroy', resource: 'post') } %></td>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
 
-<%= link_to t('link.post.new'), new_post_path %>
+<%= link_to t('link.action.new', resource: 'post'), new_post_path %>

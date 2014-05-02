@@ -3,8 +3,12 @@ pt-BR:
   activerecord:
     models:
       post: 'Post'
+      category: 'Categoria'
 
     attributes:
       post:
         title: 'Título'
         body: 'Conteúdo'
+
+      category:
+        name: 'Nome'
