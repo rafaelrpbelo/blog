@@ -6,4 +6,9 @@ feature 'Home' do
 
 		expect(page).to have_content 'Blog'
 	end
+
+  scenario 'navigation' do
+    pending
+    visit '/'
+  end
 end
