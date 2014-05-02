@@ -1,3 +1,5 @@
 class Post < ActiveRecord::Base
-	validates_presence_of :title, :body
+  has_many :categories
+
+  validates_presence_of :title, :body
 end
