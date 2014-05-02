@@ -1,0 +1,12 @@
+<%= form_for(@category) do |f| %>
+  <%= errors_explanation(@category) %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.submit t('form.action.submit', resource: 'categoria') %>
+  </div>
+<% end %>
