@@ -2,6 +2,11 @@
   <%= errors_explanation(@post) %>
 
   <div>
+    <%= f.label :tag %>
+    <%= collection_check_boxes :post, :tag_ids, Tag.all, :id, :name %>
+  </div>
+
+  <div>
     <%= f.label :title, t('form.labels.title') %>
     <%= f.text_field :title %>
   </div>

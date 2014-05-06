@@ -1,0 +1,12 @@
+<%= form_for(@tag) do |f| %>
+  <%= errors_explanation(@tag) %>
+
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.submit t('form.action.submit', resource: 'tag') %>
+  </div>
+<% end %>

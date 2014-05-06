@@ -11,7 +11,7 @@ pt-BR:
       delete:
         notice: 'Post deletado com sucesso'
 
-    category:
+    tag:
       create:
         notice: 'Categoria criada com sucesso'
 

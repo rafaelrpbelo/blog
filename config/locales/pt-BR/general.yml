@@ -6,7 +6,7 @@ pt-BR:
       new: 'Novo Post'
       edit: 'Editar Post'
 
-    category:
+    tag:
       index: 'Todas as categorias'
       new: 'Criar categoria'
       edit: 'Editar categoria'
