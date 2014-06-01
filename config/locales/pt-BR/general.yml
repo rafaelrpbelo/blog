@@ -2,12 +2,12 @@ pt-BR:
 
   title:
     post:
-      index: 'Todos os Posts'
+      index: 'Posts'
       new: 'Novo Post'
       edit: 'Editar Post'
 
     tag:
-      index: 'Todas as categorias'
+      index: 'Categorias'
       new: 'Criar categoria'
       edit: 'Editar categoria'
 
