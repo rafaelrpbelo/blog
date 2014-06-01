@@ -1289,3 +1289,28 @@
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+
+.button {
+  $padding: rem-calc(12);
+  $radius: false;
+  $full-width: false;
+  $disabled: false;
+  $is-input: false;
+  @include button($padding, $primary-color, $radius, $full-width, $disabled, $is-input);
+}
+.button-negative {
+  $padding: rem-calc(12);
+  $bg: gray;
+  $radius: false;
+  $full-width: false;
+  $disabled: false;
+  $is-input: false;
+  @include button($padding, $bg, $radius, $full-width, $disabled, $is-input);
+}
+.text-center {
+  text-align: center;
+}
+.text-mutted {
+  color: #CCC;
+  font-weight: lighter;
+}
