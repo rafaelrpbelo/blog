@@ -16,6 +16,8 @@
     <%= render 'shared/navbar' %>
 
     <%= yield %>
+
     <%= javascript_include_tag "application" %>
+    <%= yield :javascript if content_for?(:javascript) %>
   </body>
 </html>
