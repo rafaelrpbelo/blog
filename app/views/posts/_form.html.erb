@@ -13,10 +13,11 @@
 
   <div>
     <%= f.label :body, t('form.labels.body') %>
-    <%= f.text_field :body %>
+    <%= f.text_area :body, class: 'ckeditor' %>
   </div>
 
+  <br>
   <div>
-    <%= f.submit t('form.action.submit', resource: 'post') %>
+    <%= f.submit t('form.action.submit', resource: 'post'), class: 'button' %>
   </div>
 <% end %>

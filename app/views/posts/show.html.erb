@@ -1,16 +1,21 @@
 <%= notice %>
 
-<h2><%= @post.title %></h2>
+<div class='row'>
+  <div class='large-12 columns'>
+    <h2><%= @post.title %></h2>
 
-<% @post.tags.each do |tag| %>
-    <small><%= tag %></small>
-<% end %>
-
-
-<p><%= @post.created_at %></p>
-
-<p><%= @post.body %></p>
+    <% @post.tags.each do |tag| %>
+        <small><%= tag %></small>
+    <% end %>
 
 
+    <p><%= @post.created_at %></p>
+
+    <p><%= @post.body.html_safe %></p>
+  </div>
 
 <%= link_to t('link.action.back'), posts_path %>
+</div>
+
+
+
