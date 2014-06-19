@@ -1,0 +1,14 @@
+pt-BR:
+
+  flash:
+    crud:
+      create:
+        notice: '%{resource} criado com sucesso'
+        alert: 'Não foi possível criar o %{resource}'
+
+      update:
+        notice: '%{resource} atualizado com sucesso'
+        alert: 'Não foi possível atualizar o %{resource}'
+
+      delete:
+        notice: '%{resource} deletado com sucesso'

@@ -19,23 +19,23 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post, notice: t('flash.post.create.notice')
+      redirect_to @post, notice: t('flash.crud.create.notice', resource: t('activerecord.models.post'))
     else
-      render 'new'
+      render 'new', alert: t('flash.tag.create.alert', resource: t('activerecord.models.tag').downcase)
     end
   end
 
   def update
     if @post.update(post_params)
-      redirect_to @post, notice: t('flash.post.update.notice')
+      redirect_to @post, notice: t('flash.crud.update.notice', resource: t('activerecord.models.post'))
     else
-      render 'edit'
+      render 'edit', alert: t('flash.tag.update.alert', resource: t('activerecord.models.tag').downcase)
     end
   end
 
   def destroy
     @post.destroy
-    redirect_to posts_url, notice: t('flash.post.delete.notice')
+    redirect_to posts_url, notice: t('flash.crud.delete.notice', resource: t('activerecord.models.post'))
   end
 
   private

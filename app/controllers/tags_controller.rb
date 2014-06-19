@@ -16,23 +16,23 @@ class TagsController < ApplicationController
     @tag = Tag.new(tag_params)
 
     if @tag.save
-      redirect_to tags_path, notice: t('flash.tag.create.notice')
+      redirect_to tags_path, notice: t('flash.crud.create.notice', resource: t('activerecord.models.tag'))
     else
-      render :new, alert: t('flash.tag.create.alert')
+      render :new, alert: t('flash.crud.create.alert', resource: t('activerecord.models.tag').downcase)
     end
   end
 
   def update
     if @tag.update(tag_params)
-      redirect_to tags_path, notice: t('flash.tag.update.notice')
+      redirect_to tags_path, notice: t('flash.crud.update.notice', resource: t('activerecord.models.tag'))
     else
-      render :edit, alert: t('flash.tag.update.notice')
+      render :edit, alert: t('flash.crud.update.alert', resource: t('activerecord.models.tag').downcase)
     end
   end
 
   def destroy
     @tag.destroy
-    redirect_to tags_url, notice: t('flash.tag.destroy.notice')
+    redirect_to tags_url, notice: t('flash.crud.destroy.notice', resource: t('activerecord.models.tag'))
   end
 
   private
