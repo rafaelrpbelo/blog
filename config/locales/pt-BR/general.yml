@@ -2,7 +2,7 @@ pt-BR:
 
   title:
     post:
-      index: 'Posts'
+      index: 'Listagem de Posts'
       new: 'Novo Post'
       edit: 'Editar Post'
 
