@@ -24,5 +24,4 @@ group :test do
   gem 'capybara'
 end
 
-gem 'foundation-rails'
 gem 'ckeditor'
