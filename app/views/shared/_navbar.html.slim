@@ -1,0 +1,12 @@
+.navbar.navbar-default.navbar-static-top role='navigation'
+  .container-fluid
+    / Put into navbar-header toogle for mobile
+    .navbar-header
+      = link_to 'Brand', root_path, class: 'navbar-brand'
+
+    .collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li class='#{controller_name == 'posts' ? 'active' : '' }'
+          = link_to 'Posts', posts_path
+        li class='#{controller_name == 'tags' ? 'active' : '' }'
+          = link_to 'Tags', tags_path

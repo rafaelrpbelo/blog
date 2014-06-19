@@ -1,0 +1,13 @@
+DOCTYPE html
+html lang='pt-BR'
+  head
+    meta charset='utf-8'
+    title= content_for?(:title) ? yield(:title) : 'Blog - Rafael Belo'
+    = stylesheet_link_tag 'application'
+    = csrf_meta_tags
+
+  body
+    = render 'shared/navbar'
+    = yield
+    = javascript_include_tag 'application'
+    = yield :javascript if content_for?(:javascript)

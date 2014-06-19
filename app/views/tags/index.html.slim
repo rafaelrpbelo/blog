@@ -1,0 +1,25 @@
+.container-fluid
+  .row
+    .col-md-12
+
+      = notice
+
+      h2= t('title.tag.index')
+
+      table.table.table-bordered
+        thead
+          tr
+            th Name
+            th.text-center colspan='2' Ações
+
+        tbody
+          - @tags.each do |tag|
+            tr
+              td= tag.name
+              td= link_to t('link.action.edit'), edit_tag_path(tag)
+              td= link_to t('link.action.destroy'), tag, method: :delete,
+                data: { confirm: t('data.confirm.destroy', resource: 'tag') }
+
+      = link_to t('link.action.new', resource: 'tag'), new_tag_path, class: 'btn btn-primary'
+      '&nbsp;
+      = link_to t('link.action.back').capitalize, root_path, class: 'btn btn-default'

@@ -1,0 +1,27 @@
+.container-fluid
+  .row
+    .col-md-12.col-xs-12
+      =notice
+
+      h2= t('title.post.index')
+
+      table.table.table-bordered
+        thead
+          tr
+            th Title
+            th Tag
+            th.text-center colspan='3' Ações
+
+        tbody
+          - @posts.each do |post|
+            tr
+              td= post.title
+              td= post.tags.any? ? post.tags.join(' ') : "<span class='text-mutted'>Post sem tag</span>".html_safe
+              td= link_to t('link.action.show'), post
+              td= link_to t('link.action.edit'), edit_post_path(post)
+              td= link_to t('link.action.destroy'), post, method: :delete,
+                data: { confirm: t('data.confirm.destroy', resource: 'post') }
+
+      = link_to t('link.action.new', resource: 'post'), new_post_path, class: 'btn btn-primary'
+      '&nbsp;
+      = link_to t('link.action.back').capitalize, root_path, class: 'btn btn-default'

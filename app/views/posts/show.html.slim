@@ -1,0 +1,20 @@
+.container-fluid
+  .row
+    .col-md-10.col-md-offset-1
+      = notice
+
+      h1= @post.title
+
+      - @post.tags.each do |tag|
+          small= tag
+
+
+      p= @post.created_at
+
+      p= @post.body.html_safe
+
+      = link_to t('link.action.back'), posts_path
+
+
+
+
