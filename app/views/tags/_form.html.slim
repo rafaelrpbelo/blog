@@ -1,9 +1,13 @@
-= form_for(@tag) do |f|
-  = errors_explanation(@tag)
+.form-inline role='form'
+  = form_for(@tag) do |f|
+    = errors_explanation(@tag)
 
-  div
-    = f.label :name
-    = f.text_field :name
+    br
+    .form-group
+      = f.label :name
+      '&nbsp;
+      = f.text_field :name, class: 'form-control'
+      '&nbsp;
 
-  div
-    = f.submit t('form.action.submit', resource: 'tag'), class: 'button'
+    .form-group
+      = f.submit t('form.action.submit', resource: 'tag'), class: 'btn btn-primary'

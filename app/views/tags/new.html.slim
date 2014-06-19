@@ -1,5 +1,7 @@
-h2= t('title.tag.new')
+.container-fluid
+  .row
+    .col-md-12
 
-= render 'form'
-
-= link_to t('link.action.back'), tags_path, class: 'button-negative'
+      h2= t('title.tag.new')
+      = render 'form'
+      = link_to t('link.action.back'), tags_path, class: 'button-negative'
