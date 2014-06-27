@@ -7,6 +7,11 @@ Blog::Application.routes.draw do
                 sign_out: 'logout',
                 sign_up: 'signup' }
 
+  devise_scope :admin do
+    get '/admin/password', to: 'admins#edit', as: 'edit_admin_password'
+    put '/admin/password_change', to: 'admins#update', as: 'change_admin_password'
+  end
+
   root 'main#index'
 
   resources :posts
