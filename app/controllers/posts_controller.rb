@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post.slug = nil  # !!!
     if @post.update(post_params)
       redirect_to @post, notice: t('flash.crud.update.notice', resource: t('activerecord.models.post'))
     else
@@ -41,7 +42,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def post_params

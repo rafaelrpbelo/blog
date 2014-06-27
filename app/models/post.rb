@@ -6,6 +6,9 @@ class Post < ActiveRecord::Base
 
   validate :presence_tags
 
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
 private
 
   def presence_tags
