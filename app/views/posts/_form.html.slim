@@ -1,19 +1,19 @@
 .form
-= form_for(@post) do |f|
-  = errors_explanation(@post)
+  = form_for(@post) do |f|
+    = errors_explanation(@post)
 
-  .form-group
-    = f.label :tag
-    = collection_check_boxes :post, :tag_ids, Tag.all, :id, :name
+    .form-group
+      = f.label :tag
+      = collection_check_boxes :post, :tag_ids, Tag.all, :id, :name
 
-  .form-group
-    = f.label :title, t('form.labels.title')
-    = f.text_field :title, class: 'form-control'
+    .form-group
+      = f.label :title, t('form.labels.title')
+      = f.text_field :title, class: 'form-control'
 
-  .form-group
-    = f.label :body, t('form.labels.body')
-    = f.text_area :body, class: 'ckeditor'
+    .form-group
+      = f.label :body, t('form.labels.body')
+      = f.text_area :body, class: 'ckeditor'
 
-  br
-  .form-group
-    = f.submit t('form.action.submit', resource: 'post'), class: 'btn btn-primary'
+    br
+    .form-group
+      = f.submit t('form.action.submit', resource: 'post'), class: 'btn btn-primary'
