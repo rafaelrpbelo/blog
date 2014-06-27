@@ -8,6 +8,16 @@ html lang='pt-BR'
 
   body
     = render 'shared/navbar'
+
+    - if alert.present?
+      .alert.alert-danger role='alert'
+        = alert
+
+    - if notice.present?
+      .alert.alert-info role='notice'
+        = notice
+
     = yield
+
     = javascript_include_tag 'application'
     = yield :javascript if content_for?(:javascript)
