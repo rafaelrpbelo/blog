@@ -26,4 +26,5 @@ end
 
 gem 'ckeditor'
 gem 'bootstrap-sass'
-gem 'slim'
+gem 'slim-rails'
+gem 'devise'
