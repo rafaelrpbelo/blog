@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140627134815) do
+ActiveRecord::Schema.define(version: 20140702025558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,11 +43,12 @@ ActiveRecord::Schema.define(version: 20140627134815) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "posts", force: true do |t|
-    t.string   "title",      null: false
-    t.text     "body",       null: false
+    t.string   "title",                      null: false
+    t.text     "body",                       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.boolean  "published",  default: false, null: false
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree

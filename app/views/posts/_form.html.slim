@@ -7,6 +7,10 @@
       = collection_check_boxes :post, :tag_ids, Tag.all, :id, :name
 
     .form-group
+      = f.label :published
+      = f.check_box :published
+
+    .form-group
       = f.label :title, t('form.labels.title')
       = f.text_field :title, class: 'form-control'
 
